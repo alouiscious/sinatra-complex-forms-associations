@@ -1,0 +1,42 @@
+body {
+  background: #742c2c;
+
+}
+
+p#introduction {
+  color: blue;
+}
+
+p.alert {
+  color: red;
+}
+
+h1, h2 {
+  color: green;
+}
+
+article p {
+  color: blue;
+}
+
+h3 + p {
+  color: blue;
+} <!-- # Here the adjacent sibling selector will style the paragraph directly following an h3 element but not paragraphs that come after the first.-->
+
+h3 ~ p {
+  color: red;
+} <!--With this general sibling selector, all paragraph elements that come after the h3 will receive the styling.-->
+
+* {
+  color: yellow;
+}
+<!-- In this case this is going to set the color of the text yellow for any element that hasn't had its color property specified elsewhere.-->
+
+a:link {
+  color: blue;
+}
+ 
+a:visited {
+  color: purple;
+}
+
