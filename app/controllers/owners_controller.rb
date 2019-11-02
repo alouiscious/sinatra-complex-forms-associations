@@ -19,14 +19,14 @@ class OwnersController < ApplicationController
     
   end
 
-  # get '/owners/:id/edit' do 
-  #   @owner = Owner.find(params[:id])
-  #   erb :'/owners/edit'
-  # end
+  get '/owners/:id/edit' do 
+    @owner = Owner.find(params[:id])
+    erb :'/owners/edit'
+  end
 
   get '/owners/:id' do 
     @owner = Owner.find_by_id(params[:id])
-    erb :'/owners/show'
+    erb :'owners/edit'
   end
 
   patch '/owners/:id' do 
